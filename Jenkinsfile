@@ -5,7 +5,7 @@ node {
   }
   stage('Maven package'){
       mvnHome = tool name: 'maven3', type: 'maven'
-      ${mvnHome}/bin/mvn clean package
+      sh "${mvnHome}/bin/mvn clean package"
   }
 
 }
